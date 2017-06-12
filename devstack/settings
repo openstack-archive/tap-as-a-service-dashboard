@@ -1,0 +1,3 @@
+# Devstack settings
+NEUTRON_TAAS_DASHBOARD_DIR=$DEST/tap-as-a-service-dashboard
+NEUTRON_TAAS_DASHBOARD_ENABLE_FILE=$NEUTRON_TAAS_DASHBOARD_DIR/neutron_taas_dashboard/enabled/_90_project_tapservices_panel.py
