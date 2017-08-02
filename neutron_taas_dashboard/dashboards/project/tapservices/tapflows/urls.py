@@ -12,7 +12,6 @@
 #    License for the specific language governing permissions and limitations
 #    under the License.
 
-from django.conf.urls import patterns
 from django.conf.urls import url
 
 from neutron_taas_dashboard.dashboards.project.tapservices.tapflows \
@@ -20,9 +19,7 @@ from neutron_taas_dashboard.dashboards.project.tapservices.tapflows \
 
 
 TAP_FLOWS = r'^(?P<tap_flow_id>[^/]+)/%s$'
-VIEW_MOD = 'openstack_dashboard.dashboards.project.tapservices.tapflows.views'
 
-urlpatterns = patterns(
-    VIEW_MOD,
+urlpatterns = [
     url(TAP_FLOWS % 'detail', views.DetailView.as_view(), name='detail'),
-)
+]
