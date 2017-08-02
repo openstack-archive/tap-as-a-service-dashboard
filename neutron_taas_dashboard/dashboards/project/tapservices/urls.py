@@ -13,7 +13,6 @@
 #    under the License.
 
 from django.conf.urls import include
-from django.conf.urls import patterns
 from django.conf.urls import url
 
 from neutron_taas_dashboard.dashboards.project.tapservices.tapflows \
@@ -25,12 +24,11 @@ from neutron_taas_dashboard.dashboards.project.tapservices \
 
 TAP_SERVICES = r'^(?P<tap_service_id>[^/]+)/%s$'
 
-urlpatterns = patterns(
-    '',
+urlpatterns = [
     url(r'^$', views.IndexView.as_view(), name='index'),
     url(r'^create/$', views.CreateView.as_view(), name='create'),
     url(TAP_SERVICES % 'detail', views.DetailView.as_view(), name='detail'),
     url(TAP_SERVICES % 'tapflows/create', tf_views.CreateView.as_view(),
         name='createtapflow'),
     url(r'^tapflows/', include(tapflow_urls, namespace='tapflows')),
-)
+]
