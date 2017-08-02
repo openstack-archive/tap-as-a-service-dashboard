@@ -14,9 +14,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# This script is meant to be sourced from devstack.  It is a wrapper of
-# devmido scripts that allows proper exporting of environment variables.
-
 
 function neutron_taas_dashboard_install {
     setup_develop $NEUTRON_TAAS_DASHBOARD_DIR
