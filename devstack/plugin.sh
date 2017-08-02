@@ -22,8 +22,6 @@ function neutron_taas_dashboard_install {
 function neutron_taas_dashboard_configure {
     cp $NEUTRON_TAAS_DASHBOARD_ENABLE_FILE \
         $HORIZON_DIR/openstack_dashboard/local/enabled/
-
-    local local_settings=$HORIZON_DIR/openstack_dashboard/local/local_settings.py
 }
 
 if is_service_enabled horizon && is_service_enabled taas; then
