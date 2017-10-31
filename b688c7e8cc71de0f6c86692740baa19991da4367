@@ -1,0 +1,11 @@
+Verified+1: Jenkins
+Code-Review+1: Kazuhiro Suzuki <kaz@jp.fujitsu.com>
+Code-Review+2: Soichi Shigeta <shigets@labs.fujitsu.com>
+Workflow+1: YAMAMOTO Takashi <yamamoto@midokura.com>
+Code-Review+1: yanpeifei <yanpeifei@gohighsec.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Tue, 31 Oct 2017 02:21:05 +0000
+Reviewed-on: https://review.openstack.org/489976
+Project: openstack/tap-as-a-service-dashboard
+Branch: refs/heads/master
