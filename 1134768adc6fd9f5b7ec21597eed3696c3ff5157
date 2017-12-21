@@ -1,0 +1,9 @@
+Code-Review+2: YAMAMOTO Takashi <yamamoto@midokura.com>
+Code-Review+1: Kazuhiro Suzuki <kaz@jp.fujitsu.com>
+Workflow+1: YAMAMOTO Takashi <yamamoto@midokura.com>
+Verified+2: Zuul
+Submitted-by: Zuul
+Submitted-at: Thu, 21 Dec 2017 07:29:47 +0000
+Reviewed-on: https://review.openstack.org/522351
+Project: openstack/tap-as-a-service-dashboard
+Branch: refs/heads/master
