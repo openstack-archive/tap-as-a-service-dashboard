@@ -41,6 +41,11 @@ class CreateTapFlowInfoAction(workflows.Action):
                                   help_text=_("Whether to mirror the traffic"
                                               " leaving or ariving"
                                               " at the source port."))
+    vlan_filter = forms.ChoiceField(max_length=255,
+                                    label=_("VLAN Filter"),
+                                    required=False,
+                                    help_text=_("Comma separated list of"
+                                                "VLAN Ids to be mirrored."))
 
     class Meta(object):
         name = _("Information")
@@ -50,7 +55,7 @@ class CreateTapFlowInfoAction(workflows.Action):
 
 class CreateTapFlowInfo(workflows.Step):
     action_class = CreateTapFlowInfoAction
-    contributes = ("tap_flow_name", "description", "direction")
+    contributes = ("tap_flow_name", "description", "direction", "vlan_filter")
     depends_on = ("tap_service_id",)
 
 
@@ -115,10 +120,12 @@ class CreateTapFlow(ts_workflows.CreateTapService):
             direction = data['direction']
             tap_service_id = self.context.get('tap_service_id')
             port_id = data['port']
+            vlan_filter = data['vlan_filter']
             tap_flow = api.taas.create_tap_flow(request,
                                                 direction,
                                                 tap_service_id,
                                                 port_id,
+                                                vlan_filter,
                                                 **params)
             self.context['tap_flow_id'] = tap_flow.id
             return True
