@@ -12,6 +12,8 @@
     <dd>{{ tap_flow.tap_service_id|default:_("-") }}</dd>
     <dt>{% trans "Port ID" %}</dt>
     <dd>{{ tap_flow.source_port|default:_("-") }}</dd>
+    <dt>{% trans "VLAN Filter" %}</dt>
+    <dd>{{ tap_flow.vlan_filter|default:_("None") }}</dd>
     <dt>{% trans "Project ID" %}</dt>
     <dd>{{ tap_flow.tenant_id|default:_("-") }}</dd>
   </dl>
