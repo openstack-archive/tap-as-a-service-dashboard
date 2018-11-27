@@ -117,14 +117,15 @@ def show_tap_flow(request, tap_flow_id):
     return TapFlow(tap_flow.get('tap_flow'))
 
 
-def create_tap_flow(request, direction, tap_service_id, port_id, **params):
+def create_tap_flow(request, direction, tap_service_id, port_id, vlan_filter, **params):
     req_data = {}
     req_data['tap_flow'] = {
         'name': params['name'],
         'description': params['description'],
         'source_port': port_id,
         'direction': direction,
-        'tap_service_id': tap_service_id
+        'tap_service_id': tap_service_id,
+        'vlan_filter': vlan_filter
     }
 
     res = neutronclient(request).post("/taas/tap_flows", req_data)
