@@ -3,7 +3,7 @@
   "description": "Tap-as-a-Service Dashboard JavaScript tests",
   "repository": {
     "type": "git",
-    "url": "git://git.openstack.org/openstack/tap-as-a-service-dashboard"
+    "url": "https://git.openstack.org/openstack/tap-as-a-service-dashboard"
   },
   "version": "0.0.0",
   "private": true,
