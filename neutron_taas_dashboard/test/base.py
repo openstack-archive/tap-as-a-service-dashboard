@@ -13,9 +13,9 @@
 # License for the specific language governing permissions and limitations
 # under the License.
 
-from oslotest import base
+from openstack_dashboard.test import helpers
 
 
-class TestCase(base.BaseTestCase):
+class TestCase(helpers.TestCase):
 
     """Test case base class for all unit tests."""
