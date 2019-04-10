@@ -22,6 +22,8 @@
 # All configuration values have a default; values that are commented out
 # serve to show the default.
 
+from neutron_taas_dashboard \
+    import version as ui_ver
 from __future__ import print_function
 
 import os
@@ -37,8 +39,6 @@ sys.path.insert(0, ROOT)
 os.environ.setdefault('DJANGO_SETTINGS_MODULE',
                       'neutron_taas_dashboard.test.settings')
 
-from neutron_taas_dashboard \
-    import version as ui_ver
 
 
 def write_autodoc_index():
