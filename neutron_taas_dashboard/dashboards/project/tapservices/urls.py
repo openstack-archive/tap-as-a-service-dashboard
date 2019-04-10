@@ -30,5 +30,5 @@ urlpatterns = [
     url(TAP_SERVICES % 'detail', views.DetailView.as_view(), name='detail'),
     url(TAP_SERVICES % 'tapflows/create', tf_views.CreateView.as_view(),
         name='createtapflow'),
-    url(r'^tapflows/', include(tapflow_urls, namespace='tapflows')),
+    url(r'^tapflows/', include((tapflow_urls, 'tapflows'))),
 ]
