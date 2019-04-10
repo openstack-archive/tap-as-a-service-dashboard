@@ -11,6 +11,9 @@
 #    under the License.
 
 # Default to Horizons test settings to avoid any missing keys
+import neutron_taas_dashboard.enabled
+import openstack_dashboard.enabled
+from openstack_dashboard.utils import settings
 from horizon.test.settings import *  # noqa
 from openstack_dashboard.test.settings import *  # noqa
 
@@ -20,9 +23,6 @@ HORIZON_CONFIG.pop('dashboards', None)
 HORIZON_CONFIG.pop('default_dashboard', None)
 
 # Update the dashboards with neutron_taas_dashboard
-import neutron_taas_dashboard.enabled
-import openstack_dashboard.enabled
-from openstack_dashboard.utils import settings
 
 settings.update_dashboards(
     [
